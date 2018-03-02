@@ -183,3 +183,17 @@ $ sudo lxc-snapshot -n ubuntu -L
 snap0 (/var/lib/lxc/ubuntu/snaps) 2018:02:21 10:14:51
 </pre>
 
+Start the container again
+
+<pre>
+$ sudo lxc-start -n ubuntu
+</pre>
+
+and when you at some point later on wish to roll back to `snap0` 
+do this:
+
+<pre>
+$ sudo lxc-stop -n ubuntu
+$ sudo lxc-snapshot -n ubuntu -r snap0
+$ sudo lxc-start -n ubuntu
+</pre>
