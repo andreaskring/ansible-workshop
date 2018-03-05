@@ -1,0 +1,5 @@
+---
+
+- hosts: ubuntu14
+  roles:
+    - workshop

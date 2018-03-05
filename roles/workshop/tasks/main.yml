@@ -1,0 +1,17 @@
+---
+# tasks file for workshop
+
+- name: Copy config file to server
+  copy:
+    src: some-file.conf
+    dest: /tmp/alfresco.conf
+
+- name: Install many packages
+  apt:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - nano
+    - less
+    - lsof
+
