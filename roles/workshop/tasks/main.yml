@@ -21,3 +21,11 @@
     state: present
   when: opendesk
 
+- name: Copy template to server
+  template:
+    src: xyz.properties.j2
+    dest: /tmp/xyz.properties
+    owner: andreas
+    group: andreas
+
+

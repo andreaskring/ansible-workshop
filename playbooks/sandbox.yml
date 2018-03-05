@@ -1,5 +1,7 @@
 ---
 
-- hosts: ubuntu14
+- hosts: ubuntu
   roles:
     - workshop
+    - new-role
+    - workshop2

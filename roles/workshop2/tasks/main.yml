@@ -1,0 +1,23 @@
+---
+# tasks file for workshop2
+
+- name: Does file exists?
+  stat:
+    path: /etc/apache2/sites-available/000-default.conf
+  register: my_workshop_var
+  tags:
+    - file_exists
+
+- debug:
+    var: my_workshop_var
+  tags:
+    - file_exists
+
+- name: Enable default site
+  file:
+    src: /etc/apache2/sites-available/000-default.conf
+    dest: /etc/apache2/sites-enabled/000-default.conf
+    state: link
+  when: my_workshop_var.stat.exists
+  tags:
+    - file_exists
