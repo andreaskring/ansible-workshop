@@ -1,7 +1,7 @@
 [debian]
-ubuntu
+workshop
 
 [redhat]
-alfresco.example.org
-alfresco-test.example.org
+alfresco.someco.org
+alfresco-test.someco.org
 
