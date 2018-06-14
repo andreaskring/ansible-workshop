@@ -23,7 +23,7 @@ $ sudo lxc-start -n ubuntu
 Attach to the container by doing:
 
 ```
-$ sudo lxc-attach -n mox
+$ sudo lxc-attach -n ubuntu
 ```
 
 ### Add a user
